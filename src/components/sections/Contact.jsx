@@ -8,26 +8,30 @@ export function Contact({ contact }) {
   }
 
   return (
-    <section id="contact" className="py-20">
+    <section
+      id="contact"
+      className="relative scroll-mt-[5.5rem] overflow-hidden py-[clamp(4.5rem,10vw,9rem)] lg:min-h-[82vh]"
+    >
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start lg:gap-12 2xl:grid-cols-[0.76fr_1.24fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
               Contact
             </p>
-            <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+            <h2 className="mt-4 max-w-2xl text-[clamp(2.25rem,4.6vw,3.75rem)] font-semibold leading-tight text-foreground">
               {contact.headline}
             </h2>
-            <p className="mt-4 text-base leading-8 text-foreground/70">
+            <p className="mt-5 max-w-xl text-base leading-8 text-foreground/70">
               {contact.summary}
             </p>
 
-            <div className="mt-8 space-y-3 text-sm">
+            <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border/[0.66] bg-border/[0.66] text-sm sm:max-w-md">
               {contact.links.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-foreground/70 transition hover:text-primary"
+                  className="block bg-muted/[0.34] px-5 py-4 text-foreground/70 transition hover:bg-muted/[0.48] hover:text-primary"
                 >
                   {link.label}
                 </a>
@@ -36,9 +40,10 @@ export function Contact({ contact }) {
           </div>
 
           <form
-            className="rounded-lg border border-border bg-muted p-6 shadow-soft"
+            className="relative overflow-hidden rounded-lg border border-border/[0.68] bg-muted/[0.36] p-5 shadow-[0_28px_100px_rgb(var(--color-shadow)/var(--opacity-shadow-card))] backdrop-blur sm:p-6"
             onSubmit={handleSubmit}
           >
+            <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-primary/[0.54] to-transparent" />
             <div className="grid gap-5 sm:grid-cols-2">
               <Field
                 id="name"

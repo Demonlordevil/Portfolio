@@ -1,6 +1,6 @@
 export const themeConfig = {
   storageKey: "portfolio-theme",
-  defaultTheme: "light",
+  defaultTheme: "dark",
   themes: {
     light: {
       label: "Light",

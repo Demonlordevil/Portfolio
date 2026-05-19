@@ -7,7 +7,9 @@ import { templateRegistry } from "../templates/templateRegistry";
 export function App() {
   const theme = useTheme();
   const enabledSections = sectionsConfig.filter((section) => section.enabled);
-  const navLinks = enabledSections.filter((section) => section.href);
+  const navLinks = sectionsConfig.filter(
+    (section) => section.href && section.showInNav !== false,
+  );
   const activeTemplate = siteConfig.template || templatesConfig.defaultTemplate;
   const Template =
     templateRegistry[activeTemplate] ||

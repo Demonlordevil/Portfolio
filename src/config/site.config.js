@@ -14,6 +14,16 @@ export const siteConfig = {
       label: "Contact Me",
       href: "#contact",
     },
+    focusAreas: [
+      "Reusable section systems",
+      "Theme-ready interface foundations",
+      "Template-friendly portfolio architecture",
+    ],
+    highlights: [
+      { value: "React", label: "Component architecture" },
+      { value: "Vite", label: "Fast build workflow" },
+      { value: "Tailwind", label: "Themeable styling" },
+    ],
   },
   about: {
     headline: "I care about simple systems, clear interfaces, and steady craft.",

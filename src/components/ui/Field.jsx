@@ -11,7 +11,7 @@ export function Field({
       <Component
         id={id}
         className={[
-          "mt-2 w-full rounded-md border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-foreground/40 focus:border-primary focus:ring-2 focus:ring-primary/20",
+          "mt-2 w-full rounded-md border border-border/75 bg-background/[0.58] px-4 py-3 text-base text-foreground outline-none transition placeholder:text-foreground/[0.36] focus:border-primary/70 focus:ring-2 focus:ring-primary/[0.18] sm:text-sm",
           className,
         ].join(" ")}
         {...props}
