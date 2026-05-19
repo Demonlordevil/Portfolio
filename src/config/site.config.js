@@ -37,6 +37,18 @@ export const siteConfig = {
       { value: "Tailwind", label: "Styling system" },
     ],
   },
+  testimonials: {
+    headline: "Leave a note about working together.",
+    summary:
+      "Feedback helps the portfolio stay honest. If we have collaborated, reviewed work, or built something together, share what felt useful, clear, or worth improving.",
+    philosophy:
+      "I care about interfaces that feel calm to use and sensible to maintain. The best notes are specific: what changed, what became easier, and what could be stronger next time.",
+    prompts: [
+      "What stood out about the collaboration?",
+      "Where did the work create clarity?",
+      "What should I keep improving?",
+    ],
+  },
   contact: {
     headline: "Let us build something clear and useful.",
     summary:

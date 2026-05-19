@@ -13,7 +13,7 @@ export const sectionsConfig = [
     id: "services",
     label: "Services",
     href: "#services",
-    enabled: false,
+    enabled: true,
     showInNav: true,
   },
   {
@@ -32,21 +32,21 @@ export const sectionsConfig = [
     id: "experience",
     label: "Experience",
     href: "#experience",
-    enabled: false,
+    enabled: true,
     showInNav: true,
   },
   {
     id: "testimonials",
     label: "Testimonials",
     href: "#testimonials",
-    enabled: false,
+    enabled: true,
     showInNav: true,
   },
   {
     id: "blog",
     label: "Blog",
     href: "#blog",
-    enabled: false,
+    enabled: true,
     showInNav: true,
   },
   {
