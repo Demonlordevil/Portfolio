@@ -1,27 +1,24 @@
 import { siteConfig } from "../config/site.config";
-import { projects } from "../data/projects";
-import { skillGroups } from "../data/skills";
+import { sectionsConfig } from "../config/sections.config";
+import { templatesConfig } from "../config/templates.config";
 import { useTheme } from "../hooks/useTheme";
-import { Navbar } from "../components/layout/Navbar";
-import { About } from "../components/sections/About";
-import { Contact } from "../components/sections/Contact";
-import { Hero } from "../components/sections/Hero";
-import { Projects } from "../components/sections/projects/Projects";
-import { Skills } from "../components/sections/skills/Skills";
+import { templateRegistry } from "../templates/templateRegistry";
 
 export function App() {
   const theme = useTheme();
+  const enabledSections = sectionsConfig.filter((section) => section.enabled);
+  const navLinks = enabledSections.filter((section) => section.href);
+  const activeTemplate = siteConfig.template || templatesConfig.defaultTemplate;
+  const Template =
+    templateRegistry[activeTemplate] ||
+    templateRegistry[templatesConfig.defaultTemplate];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navbar brand={siteConfig.name} links={siteConfig.navLinks} theme={theme} />
-      <main>
-        <Hero profile={siteConfig.profile} />
-        <About about={siteConfig.about} />
-        <Projects projects={projects} />
-        <Skills skillGroups={skillGroups} />
-        <Contact contact={siteConfig.contact} />
-      </main>
-    </div>
+    <Template
+      brand={siteConfig.name}
+      navLinks={navLinks}
+      sections={enabledSections}
+      theme={theme}
+    />
   );
 }

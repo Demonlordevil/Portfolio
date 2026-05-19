@@ -4,7 +4,7 @@ import { Container } from "../ui/Container";
 export function Hero({ profile }) {
   return (
     <section className="border-b border-border">
-      <Container className="grid min-h-[calc(100vh-4rem)] items-center gap-12 py-20 lg:grid-cols-[1.15fr_0.85fr]">
+      <Container className="grid  items-center gap-12 py-20 lg:grid-cols-2">
         <div className="max-w-3xl">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
             {profile.eyebrow}
@@ -33,7 +33,7 @@ export function Hero({ profile }) {
         </div>
 
         <div className="rounded-lg border border-border bg-muted p-6">
-          <p className="text-sm font-medium text-foreground/70">Current focus</p>
+          <p className="text-base font-medium text-foreground/70">Current focus</p>
           <div className="mt-5 space-y-4">
             {["Reusable sections", "Theme-ready styling", "Template-friendly structure"].map(
               (item) => (

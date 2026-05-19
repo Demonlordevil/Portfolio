@@ -1,11 +1,6 @@
 export const siteConfig = {
   name: "Aditya",
-  navLinks: [
-    { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Skills", href: "#skills" },
-    { label: "Contact", href: "#contact" },
-  ],
+  template: "minimal",
   profile: {
     eyebrow: "Frontend Developer",
     headline: "I build clean, scalable interfaces for the web.",
